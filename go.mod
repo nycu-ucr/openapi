@@ -1,4 +1,4 @@
-module github.com/free5gc/openapi
+module github.com/nycu-ucr/openapi
 
 go 1.14
 
