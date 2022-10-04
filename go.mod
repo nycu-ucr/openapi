@@ -7,7 +7,6 @@ require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1
 	github.com/free5gc/logger_conf v1.0.0
 	github.com/free5gc/logger_util v1.0.0
-	github.com/free5gc/openapi v1.0.5
 	github.com/golang-jwt/jwt v3.2.1+incompatible
 	github.com/mitchellh/mapstructure v1.4.1
 	github.com/nycu-ucr/net v0.0.0-20221003123526-abb8364ebf8f
