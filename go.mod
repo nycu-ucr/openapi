@@ -9,7 +9,7 @@ require (
 	github.com/free5gc/logger_util v1.0.0
 	github.com/golang-jwt/jwt v3.2.1+incompatible
 	github.com/mitchellh/mapstructure v1.4.1
-	github.com/nycu-ucr/net v0.0.0-20221003123526-abb8364ebf8f
+	github.com/nycu-ucr/net v0.0.0-20221021121639-70a1de6ae7d1
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.7.0
 	golang.org/x/oauth2 v0.0.0-20210810183815-faf39c7919d5
