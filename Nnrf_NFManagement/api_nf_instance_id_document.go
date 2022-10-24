@@ -14,8 +14,10 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"net/http/httptrace"
 	"net/url"
 	"strings"
+	"time"
 
 	"github.com/nycu-ucr/openapi"
 	"github.com/nycu-ucr/openapi/models"
@@ -257,6 +259,21 @@ NFInstanceIDDocumentApiService Register a new NF Instance
 @return models.NfProfile
 */
 
+type Tracer struct {
+	dial_s, dial_e time.Time
+	dial_delay     time.Duration
+}
+
+func (tracer *Tracer) dial_start(network, addr string) {
+	tracer.dial_s = time.Now()
+}
+
+func (tracer *Tracer) dial_end(network, addr string, err error) {
+	tracer.dial_e = time.Now()
+	tracer.dial_delay = tracer.dial_e.Sub(tracer.dial_s)
+	fmt.Printf("\u001b[35mDial latency\u001b[0m: %v (seconds)\n", tracer.dial_delay.Seconds())
+}
+
 func (a *NFInstanceIDDocumentApiService) RegisterNFInstance(ctx context.Context, nfInstanceID string, nfProfile models.NfProfile) (models.NfProfile, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = strings.ToUpper("Put")
@@ -293,8 +310,11 @@ func (a *NFInstanceIDDocumentApiService) RegisterNFInstance(ctx context.Context,
 
 	// body params
 	localVarPostBody = &nfProfile
+	tracer := &Tracer{}
+	trace := &httptrace.ClientTrace{ConnectStart: tracer.dial_start, ConnectDone: tracer.dial_end}
 
 	r, err := openapi.PrepareRequest(ctx, a.client.cfg, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	r = r.WithContext(httptrace.WithClientTrace(r.Context(), trace))
 	if err != nil {
 		return localVarReturnValue, nil, err
 	}
