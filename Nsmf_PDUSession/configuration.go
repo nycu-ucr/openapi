@@ -10,8 +10,9 @@
 package Nsmf_PDUSession
 
 import (
-	"net/http"
 	"strings"
+
+	"github.com/nycu-ucr/gonet/http"
 )
 
 type Configuration struct {

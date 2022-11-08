@@ -13,11 +13,12 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
-	"net/http"
 	"net/http/httptrace"
 	"net/url"
 	"strings"
 	"time"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/nycu-ucr/openapi"
 	"github.com/nycu-ucr/openapi/models"

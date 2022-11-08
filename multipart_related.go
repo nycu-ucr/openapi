@@ -4,8 +4,9 @@ import (
 	"bytes"
 	"errors"
 	"io/ioutil"
-	"net/http"
 	"regexp"
+
+	"github.com/nycu-ucr/gonet/http"
 )
 
 type MultipartRelatedBinding struct{}

@@ -12,9 +12,10 @@ package Nnrf_NFDiscovery
 import (
 	"context"
 	"io/ioutil"
-	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/antihax/optional"
 

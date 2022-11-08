@@ -10,8 +10,9 @@
 package Npcf_UEPolicy
 
 import (
-	"net/http"
 	"strings"
+
+	"github.com/nycu-ucr/gonet/http"
 )
 
 // contextKeys are used to identify the type of value in the context.

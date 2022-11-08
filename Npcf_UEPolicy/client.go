@@ -18,7 +18,6 @@ import (
 	"fmt"
 	"io"
 	"mime/multipart"
-	"net/http"
 	"net/url"
 	"os"
 	"path/filepath"
@@ -28,6 +27,8 @@ import (
 	"strings"
 	"time"
 	"unicode/utf8"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"golang.org/x/oauth2"
 )

@@ -8,9 +8,10 @@ package Nnrf_NFManagement
 import (
 	"context"
 	"io/ioutil"
-	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/nycu-ucr/openapi"
 	. "github.com/nycu-ucr/openapi/models"

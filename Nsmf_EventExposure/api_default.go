@@ -13,9 +13,10 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
-	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/nycu-ucr/openapi"
 	"github.com/nycu-ucr/openapi/models"
@@ -33,9 +34,10 @@ type (
 
 /*
 EventExposureNotification
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param notificationUri
- * @param request
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param notificationUri
+  - @param request
+
 @return
 */
 func (a *DefaultCallbackApi) SmfEventExposureNotification(ctx context.Context, notificationUri string, request models.NsmfEventExposureNotification) (interface{}, *http.Response, error) {
