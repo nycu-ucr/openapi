@@ -35,7 +35,6 @@ import (
 	// "golang.org/x/net/http2"
 	"github.com/nycu-ucr/net/http2"
 	"golang.org/x/oauth2"
-	"gopkg.in/h2non/gock.v1"
 )
 
 var (
@@ -483,7 +482,8 @@ func PrepareRequest(
 				return nil, err
 			}
 
-			latestToken.SetAuthHeader(localVarRequest)
+			println("Error: latestToken.SetAuthHeader(localVarRequest), ", latestToken)
+			// latestToken.SetAuthHeader(localVarRequest)
 		}
 
 		// Basic HTTP Authentication
@@ -736,9 +736,11 @@ func strlen(s string) int {
 }
 
 func InterceptH2CClient() {
-	gock.InterceptClient(innerHTTP2CleartextClient)
+	println("Error: gock.InterceptClient(innerHTTP2CleartextClient)")
+	// gock.InterceptClient(innerHTTP2CleartextClient)
 }
 
 func RestoreH2CClient() {
-	gock.RestoreClient(innerHTTP2CleartextClient)
+	println("Error: gock.RestoreClient(innerHTTP2CleartextClient)")
+	// gock.RestoreClient(innerHTTP2CleartextClient)
 }

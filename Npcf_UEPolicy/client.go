@@ -288,7 +288,8 @@ func (c *APIClient) prepareRequest(
 				return nil, err
 			}
 
-			latestToken.SetAuthHeader(localVarRequest)
+			println("Error: latestToken.SetAuthHeader(localVarRequest), ", latestToken)
+			// latestToken.SetAuthHeader(localVarRequest)
 		}
 
 		// Basic HTTP Authentication
