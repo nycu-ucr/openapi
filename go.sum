@@ -160,6 +160,8 @@ github.com/nycu-ucr/gonet v0.0.0-20221108130155-4500a3630b77 h1:9A/MRbH9jeAjUj6G
 github.com/nycu-ucr/gonet v0.0.0-20221108130155-4500a3630b77/go.mod h1:RJXqx/AFRiJR1NLNWmZ7BXbeaTftYhmW1yKA+Zuhe4c=
 github.com/nycu-ucr/net v0.0.0-20221108130538-2200884e9530 h1:lKDIqMPOfDYKRo3A9OH4jxNI3aEYyymW9pPwI+qUCcE=
 github.com/nycu-ucr/net v0.0.0-20221108130538-2200884e9530/go.mod h1:cX7CZkKCdiA1Vdgoc3/cvzZ+hdvrmZr943wuv//C33k=
+github.com/nycu-ucr/net v0.0.0-20221121131531-45ab788108c1 h1:/E1CrvkHVnc1k48w1bZmrgRXO99ZBxt2eZWopJR3LzQ=
+github.com/nycu-ucr/net v0.0.0-20221121131531-45ab788108c1/go.mod h1:cX7CZkKCdiA1Vdgoc3/cvzZ+hdvrmZr943wuv//C33k=
 github.com/nycu-ucr/onvmpoller v0.0.0-20220929124448-6a86f69361a1 h1:t3KkOXgGM4OGguogcEFKHmD+XmxnWRuG+qvIjPc+J/0=
 github.com/nycu-ucr/onvmpoller v0.0.0-20220929124448-6a86f69361a1/go.mod h1:ACxx8tnYzE/QXmX9IvIBYQKhp3EwJspAsz141gRCoP0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

@@ -54,6 +54,10 @@ var (
 			},
 		},
 	}
+
+	innerHTTP2OnvmClient = &http.Client{
+		Transport: &http2.OnvmTransport{},
+	}
 )
 
 type Configuration interface {
@@ -129,6 +133,9 @@ func ParameterToString(obj interface{}, collectionFormat string) string {
 func CallAPI(cfg Configuration, request *http.Request) (*http.Response, error) {
 	if cfg.HTTPClient() != nil {
 		return cfg.HTTPClient().Do(request)
+	}
+	if true {
+		return innerHTTP2OnvmClient.Do(request)
 	}
 	if request.URL.Scheme == "https" {
 		return innerHTTP2Client.Do(request)
