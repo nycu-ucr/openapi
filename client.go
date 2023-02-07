@@ -31,8 +31,6 @@ import (
 	"unicode/utf8"
 
 	"github.com/nycu-ucr/gonet/http"
-
-	// "golang.org/x/net/http2"
 	"github.com/nycu-ucr/net/http2"
 	"golang.org/x/oauth2"
 )
@@ -56,7 +54,9 @@ var (
 	}
 
 	innerHTTP2OnvmClient = &http.Client{
-		Transport: &http2.OnvmTransport{},
+		Transport: &http2.OnvmTransport{
+			UseONVM: true,
+		},
 	}
 )
 
