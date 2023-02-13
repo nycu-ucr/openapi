@@ -11,6 +11,7 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1
 	github.com/nycu-ucr/gonet v0.0.0-20221206181427-d67da1e7556c
 	github.com/nycu-ucr/net v0.0.0-20230207035608-0a9a44aa922d
+	github.com/nycu-ucr/onvmpoller v0.0.0-20230206045804-e3f65dd61911
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.7.0
 	golang.org/x/net v0.1.0 // indirect

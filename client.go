@@ -32,6 +32,7 @@ import (
 
 	"github.com/nycu-ucr/gonet/http"
 	"github.com/nycu-ucr/net/http2"
+	"github.com/nycu-ucr/onvmpoller"
 	"golang.org/x/oauth2"
 )
 
@@ -54,10 +55,24 @@ var (
 	}
 
 	innerHTTP2OnvmClient = &http.Client{
+		Transport: &http2.Transport{
+			AllowHTTP: true,
+			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
+				return onvmpoller.DialONVM("onvm", addr)
+			},
+		},
+	}
+
+	innerHTTP2OnvmTransportClient = &http.Client{
 		Transport: &http2.OnvmTransport{
 			UseONVM: true,
 		},
 	}
+)
+
+const (
+	USE_ONVM_CONN      = true
+	USE_ONVM_TRANSPORT = true
 )
 
 type Configuration interface {
@@ -134,13 +149,21 @@ func CallAPI(cfg Configuration, request *http.Request) (*http.Response, error) {
 	if cfg.HTTPClient() != nil {
 		return cfg.HTTPClient().Do(request)
 	}
-	if true {
-		return innerHTTP2OnvmClient.Do(request)
-	}
-	if request.URL.Scheme == "https" {
-		return innerHTTP2Client.Do(request)
-	} else if request.URL.Scheme == "http" {
-		return innerHTTP2CleartextClient.Do(request)
+	if USE_ONVM_CONN {
+		if USE_ONVM_TRANSPORT {
+			// ONVM transport with onvm connection
+			return innerHTTP2OnvmTransportClient.Do(request)
+		} else {
+			// HTTP2 transport with onvm connection
+			return innerHTTP2OnvmClient.Do(request)
+		}
+	} else {
+		// HTTP2 transport with tcp connection
+		if request.URL.Scheme == "https" {
+			return innerHTTP2Client.Do(request)
+		} else if request.URL.Scheme == "http" {
+			return innerHTTP2CleartextClient.Do(request)
+		}
 	}
 
 	return nil, fmt.Errorf("unsupported scheme[%s]", request.URL.Scheme)
