@@ -49,7 +49,14 @@ var (
 		Transport: &http2.Transport{
 			AllowHTTP: true,
 			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
-				return net.Dial(network, addr)
+				conn, err := net.Dial(network, addr)
+
+				/* Unix Domain Socket */
+				// unix_addr := fmt.Sprintf("/tmp/unix_%s", addr)
+				// fmt.Printf("\u001b[33m You are using UNIX \u001b[0m, openapi/client.go, dial to %s\n", unix_addr)
+				// conn, err := net.Dial("unix", unix_addr)
+
+				return conn, err
 			},
 		},
 	}
