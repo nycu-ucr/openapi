@@ -36,6 +36,12 @@ import (
 	"golang.org/x/oauth2"
 )
 
+const (
+	USE_ONVM_CONN      = false
+	USE_ONVM_CONN_XIO  = true
+	USE_ONVM_TRANSPORT = true
+)
+
 var (
 	innerHTTP2Client = &http.Client{
 		Transport: &http2.Transport{
@@ -70,26 +76,12 @@ var (
 		},
 	}
 
-	innerHTTP2OnvmXioClient = &http.Client{
-		Transport: &http2.Transport{
-			AllowHTTP: true,
-			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
-				return onvmpoller.DialXIO("onvm", addr)
-			},
-		},
-	}
-
 	innerHTTP2OnvmTransportClient = &http.Client{
 		Transport: &http2.OnvmTransport{
-			UseONVM: true,
+			UseONVM: USE_ONVM_CONN,
+			UseXIO:  USE_ONVM_CONN_XIO,
 		},
 	}
-)
-
-const (
-	USE_ONVM_CONN      = true
-	USE_ONVM_CONN_XIO  = true
-	USE_ONVM_TRANSPORT = false
 )
 
 type Configuration interface {
@@ -166,13 +158,11 @@ func CallAPI(cfg Configuration, request *http.Request) (*http.Response, error) {
 	if cfg.HTTPClient() != nil {
 		return cfg.HTTPClient().Do(request)
 	}
-	if USE_ONVM_CONN {
+
+	if USE_ONVM_CONN || USE_ONVM_CONN_XIO {
 		if USE_ONVM_TRANSPORT {
 			// ONVM transport with onvm connection
 			return innerHTTP2OnvmTransportClient.Do(request)
-		} else if USE_ONVM_CONN_XIO {
-			// ONVM transport with onvm xio connection
-			return innerHTTP2OnvmXioClient.Do(request)
 		} else {
 			// HTTP2 transport with onvm connection
 			return innerHTTP2OnvmClient.Do(request)

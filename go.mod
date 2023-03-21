@@ -10,7 +10,7 @@ require (
 	github.com/golang-jwt/jwt v3.2.1+incompatible
 	github.com/mitchellh/mapstructure v1.4.1
 	github.com/nycu-ucr/gonet v0.0.0-20230307120806-af99a970179a
-	github.com/nycu-ucr/net v0.0.0-20230321073243-55e3984ea72c
+	github.com/nycu-ucr/net v0.0.0-20230321120316-fe997533da89
 	github.com/nycu-ucr/onvmpoller v0.0.0-20230320121227-d45eb5171b4e
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.7.0
