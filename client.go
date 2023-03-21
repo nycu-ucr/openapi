@@ -70,6 +70,15 @@ var (
 		},
 	}
 
+	innerHTTP2OnvmXioClient = &http.Client{
+		Transport: &http2.Transport{
+			AllowHTTP: true,
+			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
+				return onvmpoller.DialXIO("onvm", addr)
+			},
+		},
+	}
+
 	innerHTTP2OnvmTransportClient = &http.Client{
 		Transport: &http2.OnvmTransport{
 			UseONVM: true,
@@ -79,7 +88,8 @@ var (
 
 const (
 	USE_ONVM_CONN      = true
-	USE_ONVM_TRANSPORT = true
+	USE_ONVM_CONN_XIO  = true
+	USE_ONVM_TRANSPORT = false
 )
 
 type Configuration interface {
@@ -160,6 +170,9 @@ func CallAPI(cfg Configuration, request *http.Request) (*http.Response, error) {
 		if USE_ONVM_TRANSPORT {
 			// ONVM transport with onvm connection
 			return innerHTTP2OnvmTransportClient.Do(request)
+		} else if USE_ONVM_CONN_XIO {
+			// ONVM transport with onvm xio connection
+			return innerHTTP2OnvmXioClient.Do(request)
 		} else {
 			// HTTP2 transport with onvm connection
 			return innerHTTP2OnvmClient.Do(request)
