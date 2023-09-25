@@ -10,7 +10,7 @@
 package Npcf_BDTPolicyControl
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"strings"
 )
 

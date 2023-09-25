@@ -13,7 +13,7 @@ import (
 	_context "context"
 	"fmt"
 	_ioutil "io/ioutil"
-	_nethttp "net/http"
+	_nethttp "github.com/nycu-ucr/gonet/http"
 	_neturl "net/url"
 	"strings"
 

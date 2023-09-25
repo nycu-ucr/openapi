@@ -10,7 +10,7 @@
 package Namf_EventExposure
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"strings"
 )
 

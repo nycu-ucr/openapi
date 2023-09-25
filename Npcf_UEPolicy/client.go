@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"io"
 	"mime/multipart"
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"net/url"
 	"os"
 	"path/filepath"

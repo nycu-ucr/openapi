@@ -10,7 +10,7 @@
 package Npcf_SMPolicyControl
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"strings"
 )
 

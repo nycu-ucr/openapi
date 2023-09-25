@@ -10,7 +10,7 @@
 package Nudm_ParameterProvision
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"strings"
 )
 

@@ -6,6 +6,7 @@ require (
 	github.com/antihax/optional v1.0.0
 	github.com/golang-jwt/jwt v3.2.1+incompatible
 	github.com/mitchellh/mapstructure v1.4.1
+	github.com/nycu-ucr/gonet v0.0.0-20230321050809-f6bf07ae0d7e
 	github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.0
@@ -15,11 +16,9 @@ require (
 
 require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1 // indirect
-	github.com/cornelk/hashmap v1.0.8 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542 // indirect
-	github.com/nycu-ucr/gonet v0.0.0-20230321050809-f6bf07ae0d7e // indirect
 	github.com/nycu-ucr/onvmpoller v0.0.0-20230222141454-8145d720d05c // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect

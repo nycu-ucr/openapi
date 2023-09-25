@@ -10,7 +10,7 @@
 package _Namf_Location
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"strings"
 )
 

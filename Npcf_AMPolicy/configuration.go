@@ -10,7 +10,7 @@
 package Npcf_AMPolicy
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"strings"
 )
 

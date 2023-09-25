@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 	"io/ioutil"
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"regexp"
 )
 

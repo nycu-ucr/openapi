@@ -12,7 +12,7 @@ package Npcf_BDTPolicyControl
 import (
 	"context"
 	"io/ioutil"
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"net/url"
 	"strings"
 

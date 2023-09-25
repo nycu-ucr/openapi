@@ -20,7 +20,6 @@ import (
 	"io"
 	"mime/multipart"
 	"net"
-	"net/http"
 	"net/textproto"
 	"net/url"
 	"os"
@@ -30,6 +29,8 @@ import (
 	"strings"
 	"time"
 	"unicode/utf8"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/nycu-ucr/net/http2"
 	"golang.org/x/oauth2"

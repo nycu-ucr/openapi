@@ -12,7 +12,7 @@ package Nnssf_NSSelection
 import (
 	"context"
 	"io/ioutil"
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"net/url"
 	"strings"
 

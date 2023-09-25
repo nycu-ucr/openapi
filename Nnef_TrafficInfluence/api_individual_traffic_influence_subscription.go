@@ -12,7 +12,7 @@ package Nnef_TrafficInfluence
 import (
 	_context "context"
 	_ioutil "io/ioutil"
-	_nethttp "net/http"
+	_nethttp "github.com/nycu-ucr/gonet/http"
 	_neturl "net/url"
 	"strings"
 
