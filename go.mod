@@ -1,4 +1,4 @@
-module github.com/free5gc/openapi
+module github.com/nycu-ucr/openapi
 
 go 1.17
 
@@ -12,8 +12,6 @@ require (
 	gopkg.in/h2non/gock.v1 v1.1.2
 )
 
-require github.com/nycu-ucr/net v0.0.0-20200822124328-c89045814202 // indirect
-
 require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -23,6 +21,7 @@ require (
 	github.com/nycu-ucr/onvmpoller v0.0.0-20230222141454-8145d720d05c // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
+	golang.org/x/net v0.0.0-20200822124328-c89045814202 // indirect
 	golang.org/x/sys v0.1.0 // indirect
 	golang.org/x/text v0.7.0 // indirect
 	google.golang.org/appengine v1.6.6 // indirect
