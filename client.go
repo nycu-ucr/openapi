@@ -31,7 +31,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"golang.org/x/net/http2"
+	"github.com/nycu-ucr/net/http2"
 	"golang.org/x/oauth2"
 	"gopkg.in/h2non/gock.v1"
 )
