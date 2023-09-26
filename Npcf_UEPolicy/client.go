@@ -29,7 +29,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"golang.org/x/oauth2"
+	"github.com/nycu-ucr/oauth2"
 )
 
 var (

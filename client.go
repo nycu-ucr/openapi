@@ -33,7 +33,7 @@ import (
 	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/nycu-ucr/net/http2"
-	"golang.org/x/oauth2"
+	"github.com/nycu-ucr/oauth2"
 	"gopkg.in/h2non/gock.v1"
 )
 
