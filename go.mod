@@ -7,7 +7,7 @@ require (
 	github.com/golang-jwt/jwt v3.2.1+incompatible
 	github.com/mitchellh/mapstructure v1.4.1
 	github.com/nycu-ucr/gonet v0.0.0-20230321050809-f6bf07ae0d7e
-	github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d // indirect
+	github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.0
 	golang.org/x/oauth2 v0.0.0-20210810183815-faf39c7919d5
