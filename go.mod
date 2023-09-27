@@ -8,7 +8,7 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1
 	github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5
 	github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d
-	github.com/nycu-ucr/oauth2 v0.0.0-20230927061352-9b0a0f3cb738
+	github.com/nycu-ucr/oauth2 v0.0.0-20230927061848-fdb51070ee56
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.0
 	gopkg.in/h2non/gock.v1 v1.1.2
@@ -24,7 +24,6 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
 	golang.org/x/net v0.15.0 // indirect
-	golang.org/x/oauth2 v0.8.0 // indirect
 	golang.org/x/sys v0.12.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect

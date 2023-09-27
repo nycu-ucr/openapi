@@ -25,8 +25,8 @@ github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5 h1:exiqe20svSWl12v3
 github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5/go.mod h1:2+o1Sh6bfu/UizxCu++Q4IsnpB2RmTfAh7Ik89SYmuE=
 github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d h1:6unkPf6PDRNJSHzRqikHmWV2NxxQ7J0TUOzKwqjqVdE=
 github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d/go.mod h1:DOdS2y4k3JZ2dWZ9UHlhmfbSbxapyoykA9JsSELPR00=
-github.com/nycu-ucr/oauth2 v0.0.0-20230927061352-9b0a0f3cb738 h1:1csMfKY4mKe1oiuk9SUVscJfks5bvHA927L7hgrgYY8=
-github.com/nycu-ucr/oauth2 v0.0.0-20230927061352-9b0a0f3cb738/go.mod h1:Niva9aKrFq+IWcFcFldSSmeLULVhVyS0zA1zXVZ2Hs8=
+github.com/nycu-ucr/oauth2 v0.0.0-20230927061848-fdb51070ee56 h1:gNMqbayMCakrKt4ozp6E5ukzUjtUD5twabgxWqq0+i8=
+github.com/nycu-ucr/oauth2 v0.0.0-20230927061848-fdb51070ee56/go.mod h1:Niva9aKrFq+IWcFcFldSSmeLULVhVyS0zA1zXVZ2Hs8=
 github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb h1:KmNggFB5pP0jJnk5Djk0+y2VIOiAJVVACIUc6uniTyY=
 github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb/go.mod h1:KGOJFB22ziiaSu3FEpKZLBmwwbH2XIvcI7AigdWRxNU=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
@@ -43,7 +43,6 @@ golang.org/x/net v0.0.0-20190603091049-60506f45cf65/go.mod h1:HSz+uSET+XFnRR8LxR
 golang.org/x/net v0.15.0 h1:ugBLEUaxABaB5AJqW9enI0ACdci2RUd4eP51NTBvuJ8=
 golang.org/x/net v0.15.0/go.mod h1:idbUs1IY1+zTqbi8yxTbhexhEEk5ur9LInksu6HrEpk=
 golang.org/x/oauth2 v0.8.0 h1:6dkIjl3j3LtZ/O3sTgZTMsLKSftL/B8Zgq4huOIIUu8=
-golang.org/x/oauth2 v0.8.0/go.mod h1:yr7u4HXZRm1R1kBWqr/xKNqewf0plRYoB7sla+BCIXE=
 golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.12.0 h1:CM0HF96J0hcLAwsHPJZjfdNzs0gftsLfgKt57wWHJ0o=
