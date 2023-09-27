@@ -2,8 +2,6 @@ github.com/antihax/optional v1.0.0 h1:xK2lYat7ZLaVVcIuj82J8kIro4V6kDe0AUDFboUCwc
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
 github.com/antonfisher/nested-logrus-formatter v1.3.1 h1:NFJIr+pzwv5QLHTPyKz9UMEoHck02Q9L0FP13b/xSbQ=
 github.com/antonfisher/nested-logrus-formatter v1.3.1/go.mod h1:6WTfyWFkBc9+zyBaKIqRrg/KwMqBbodBjgbHjDz7zjA=
-github.com/cornelk/hashmap v1.0.8 h1:nv0AWgw02n+iDcawr5It4CjQIAcdMMKRrs10HOJYlrc=
-github.com/cornelk/hashmap v1.0.8/go.mod h1:RfZb7JO3RviW/rT6emczVuC/oxpdz4UsSB2LJSclR1k=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -25,8 +23,8 @@ github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5 h1:exiqe20svSWl12v3
 github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5/go.mod h1:2+o1Sh6bfu/UizxCu++Q4IsnpB2RmTfAh7Ik89SYmuE=
 github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d h1:6unkPf6PDRNJSHzRqikHmWV2NxxQ7J0TUOzKwqjqVdE=
 github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d/go.mod h1:DOdS2y4k3JZ2dWZ9UHlhmfbSbxapyoykA9JsSELPR00=
-github.com/nycu-ucr/oauth2 v0.0.0-20230927061848-fdb51070ee56 h1:gNMqbayMCakrKt4ozp6E5ukzUjtUD5twabgxWqq0+i8=
-github.com/nycu-ucr/oauth2 v0.0.0-20230927061848-fdb51070ee56/go.mod h1:Niva9aKrFq+IWcFcFldSSmeLULVhVyS0zA1zXVZ2Hs8=
+github.com/nycu-ucr/oauth2 v0.0.0-20230927074609-e939447bd9b2 h1:RqP4Po28aFy+44yU7wr7EmotdoIHo2Ml/Py92sUd1wk=
+github.com/nycu-ucr/oauth2 v0.0.0-20230927074609-e939447bd9b2/go.mod h1:WhOwv6GSfVpPvr4VqB5QFNWyvNc7M0k3fNjfhj95ni0=
 github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb h1:KmNggFB5pP0jJnk5Djk0+y2VIOiAJVVACIUc6uniTyY=
 github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb/go.mod h1:KGOJFB22ziiaSu3FEpKZLBmwwbH2XIvcI7AigdWRxNU=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=

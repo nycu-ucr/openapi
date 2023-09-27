@@ -8,7 +8,7 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1
 	github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5
 	github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d
-	github.com/nycu-ucr/oauth2 v0.0.0-20230927061848-fdb51070ee56
+	github.com/nycu-ucr/oauth2 v0.0.0-20230927074609-e939447bd9b2
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.0
 	gopkg.in/h2non/gock.v1 v1.1.2
@@ -16,7 +16,6 @@ require (
 
 require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1 // indirect
-	github.com/cornelk/hashmap v1.0.8 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542 // indirect
