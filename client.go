@@ -37,14 +37,18 @@ import (
 	"github.com/nycu-ucr/gock"
 )
 
+const (
+	USE_ONVM_CONN      = false
+	USE_ONVM_CONN_XIO  = true
+	USE_ONVM_TRANSPORT = true
+)
+
 var (
 	innerHTTP2Client = &http.Client{
-		Transport: &http2.OnvmTransport{
-			UseONVM: false,
-			UseXIO:  true,
-			// TLSClientConfig: &tls.Config{
-			// 	InsecureSkipVerify: true,
-			// },
+		Transport: &http2.Transport{
+			TLSClientConfig: &tls.Config{
+				InsecureSkipVerify: true,
+			},
 		},
 	}
 
@@ -54,6 +58,22 @@ var (
 			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
 				return net.Dial(network, addr)
 			},
+		},
+	}
+
+	innerHTTP2OnvmClient = &http.Client{
+		Transport: &http2.Transport{
+			AllowHTTP: true,
+			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
+				return onvmpoller.DialONVM("onvm", addr)
+			},
+		},
+	}
+
+	innerHTTP2OnvmTransportClient = &http.Client{
+		Transport: &http2.OnvmTransport{
+			UseONVM: USE_ONVM_CONN,
+			UseXIO:  USE_ONVM_CONN_XIO,
 		},
 	}
 )
@@ -132,10 +152,21 @@ func CallAPI(cfg Configuration, request *http.Request) (*http.Response, error) {
 	if cfg.HTTPClient() != nil {
 		return cfg.HTTPClient().Do(request)
 	}
-	if request.URL.Scheme == "https" {
-		return innerHTTP2Client.Do(request)
-	} else if request.URL.Scheme == "http" {
-		return innerHTTP2CleartextClient.Do(request)
+	if USE_ONVM_CONN || USE_ONVM_CONN_XIO {
+		if USE_ONVM_TRANSPORT {
+			// ONVM transport with onvm connection
+			return innerHTTP2OnvmTransportClient.Do(request)
+		} else {
+			// HTTP2 transport with onvm connection
+			return innerHTTP2OnvmClient.Do(request)
+		}
+	} else {
+		// HTTP2 transport with tcp connection
+		if request.URL.Scheme == "https" {
+			return innerHTTP2Client.Do(request)
+		} else if request.URL.Scheme == "http" {
+			return innerHTTP2CleartextClient.Do(request)
+		}
 	}
 
 	return nil, fmt.Errorf("unsupported scheme[%s]", request.URL.Scheme)
