@@ -39,10 +39,12 @@ import (
 
 var (
 	innerHTTP2Client = &http.Client{
-		Transport: &http2.Transport{
-			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: true,
-			},
+		Transport: &http2.OnvmTransport{
+			UseONVM: false,
+			UseXIO:  true,
+			// TLSClientConfig: &tls.Config{
+			// 	InsecureSkipVerify: true,
+			// },
 		},
 	}
 
