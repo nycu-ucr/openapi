@@ -34,7 +34,7 @@ import (
 
 	"github.com/nycu-ucr/net/http2"
 	"github.com/nycu-ucr/oauth2"
-	"gopkg.in/h2non/gock.v1"
+	"github.com/nycu-ucr/gock"
 )
 
 var (
