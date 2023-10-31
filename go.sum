@@ -37,8 +37,8 @@ github.com/nycu-ucr/oauth2 v0.0.0-20230927074609-e939447bd9b2/go.mod h1:WhOwv6GS
 github.com/nycu-ucr/onvmpoller v0.0.0-20220929124448-6a86f69361a1/go.mod h1:ACxx8tnYzE/QXmX9IvIBYQKhp3EwJspAsz141gRCoP0=
 github.com/nycu-ucr/onvmpoller v0.0.0-20230206045804-e3f65dd61911/go.mod h1:KGOJFB22ziiaSu3FEpKZLBmwwbH2XIvcI7AigdWRxNU=
 github.com/nycu-ucr/onvmpoller v0.0.0-20230222141454-8145d720d05c/go.mod h1:KGOJFB22ziiaSu3FEpKZLBmwwbH2XIvcI7AigdWRxNU=
-github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb h1:KmNggFB5pP0jJnk5Djk0+y2VIOiAJVVACIUc6uniTyY=
-github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb/go.mod h1:KGOJFB22ziiaSu3FEpKZLBmwwbH2XIvcI7AigdWRxNU=
+github.com/nycu-ucr/onvmpoller v0.0.0-20230807070551-64ddd3797912 h1:Bn1iG2q+lqdjvbhuP/OU8MBBZgdrfA9MT1QyElRNCjU=
+github.com/nycu-ucr/onvmpoller v0.0.0-20230807070551-64ddd3797912/go.mod h1:KGOJFB22ziiaSu3FEpKZLBmwwbH2XIvcI7AigdWRxNU=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

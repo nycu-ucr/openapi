@@ -10,7 +10,7 @@ require (
 	github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5
 	github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d
 	github.com/nycu-ucr/oauth2 v0.0.0-20230927074609-e939447bd9b2
-	github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb
+	github.com/nycu-ucr/onvmpoller v0.0.0-20230807070551-64ddd3797912
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.0
 )
