@@ -3,8 +3,9 @@ package openapi
 import (
 	"bytes"
 	"io/ioutil"
-	"net/http"
 	"regexp"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/pkg/errors"
 )

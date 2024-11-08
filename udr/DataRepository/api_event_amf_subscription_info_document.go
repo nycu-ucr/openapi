@@ -13,7 +13,7 @@
 package DataRepository
 
 import (
-	"github.com/free5gc/openapi"
+	"github.com/nycu-ucr/openapi"
 
 	"context"
 	"io/ioutil"

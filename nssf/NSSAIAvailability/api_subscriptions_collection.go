@@ -13,8 +13,8 @@
 package NSSAIAvailability
 
 import (
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/openapi"
+	"github.com/nycu-ucr/openapi/models"
 
 	"context"
 	"io/ioutil"

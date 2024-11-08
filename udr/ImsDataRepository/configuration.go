@@ -1,7 +1,7 @@
 /*
  * Nudr_DataRepository API OpenAPI file
  *
- * Unified Data Repository Service.   © 2023, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).   All rights reserved. 
+ * Unified Data Repository Service.   © 2023, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).   All rights reserved.
  *
  * Source file: 3GPP TS 29.504 V18.3.0; 5G System; Unified Data Repository Services; Stage 3
  * Url: https://www.3gpp.org/ftp/Specs/archive/29_series/29.504/
@@ -13,8 +13,9 @@
 package ImsDataRepository
 
 import (
-	"net/http"
-    "strings"
+	"strings"
+
+	"github.com/nycu-ucr/gonet/http"
 )
 
 type Configuration struct {

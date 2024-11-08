@@ -11,7 +11,8 @@ package openapi
 
 import (
 	"fmt"
-	"net/http"
+
+	"github.com/nycu-ucr/gonet/http"
 )
 
 // GenericOpenAPIError Provides access to the body, error and model on returned errors.

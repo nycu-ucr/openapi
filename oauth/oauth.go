@@ -17,7 +17,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/pkg/errors"
 
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 type CCAClaims struct {
@@ -140,8 +140,8 @@ func GenerateCertificate(
 			Country:            []string{"TW"},
 			Province:           []string{"Taiwan"},
 			Locality:           []string{"Hsinchu"},
-			Organization:       []string{"free5gc"},
-			OrganizationalUnit: []string{"free5gc"},
+			Organization:       []string{"nycu-ucr"},
+			OrganizationalUnit: []string{"nycu-ucr"},
 		},
 		NotBefore: time.Now(),
 		NotAfter:  time.Now().AddDate(10, 0, 0),

@@ -5,11 +5,11 @@ import (
 	"sync"
 	"time"
 
-	"golang.org/x/oauth2"
+	"github.com/nycu-ucr/oauth2"
 
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/openapi/nrf/AccessToken"
+	"github.com/nycu-ucr/openapi"
+	"github.com/nycu-ucr/openapi/models"
+	"github.com/nycu-ucr/openapi/nrf/AccessToken"
 )
 
 var tokenMap sync.Map

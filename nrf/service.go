@@ -2,18 +2,19 @@ package nrf
 
 import (
 	"context"
-	"net/http"
 	"sync"
 	"time"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"go.opentelemetry.io/otel"
 
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/openapi/nrf/NFDiscovery"
-	"github.com/free5gc/openapi/nrf/NFManagement"
+	"github.com/nycu-ucr/openapi"
+	"github.com/nycu-ucr/openapi/models"
+	"github.com/nycu-ucr/openapi/nrf/NFDiscovery"
+	"github.com/nycu-ucr/openapi/nrf/NFManagement"
 )
 
 const (

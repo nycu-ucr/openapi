@@ -6,7 +6,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/free5gc/openapi/nrf/NFManagement"
+	"github.com/nycu-ucr/openapi/nrf/NFManagement"
 )
 
 func TestSetHBTimer(t *testing.T) {

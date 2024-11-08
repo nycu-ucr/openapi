@@ -19,7 +19,6 @@ import (
 	"io"
 	"mime/multipart"
 	"net"
-	"net/http"
 	"net/http/httptrace"
 	"net/textproto"
 	"net/url"
@@ -30,18 +29,26 @@ import (
 	"strings"
 	"time"
 
-	"github.com/h2non/gock"
+	"github.com/nycu-ucr/gonet/http"
+
+	"github.com/nycu-ucr/gock"
+	"github.com/nycu-ucr/net/http2"
+	"github.com/nycu-ucr/oauth2"
+	"github.com/nycu-ucr/onvmpoller"
 	"github.com/pkg/errors"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
-	"golang.org/x/net/http2"
-	"golang.org/x/oauth2"
 )
 
 const (
 	TimeoutPeriod         = 10 * time.Second
 	ReadIdleTimeoutPeriod = 1 * time.Second
 	PingTimeoutPeriod     = 1 * time.Second
+)
+const (
+	USE_ONVM_CONN      = false
+	USE_ONVM_CONN_XIO  = true
+	USE_ONVM_TRANSPORT = true
 )
 
 var (
@@ -67,6 +74,21 @@ var (
 			PingTimeout:     PingTimeoutPeriod,
 		}),
 		Timeout: TimeoutPeriod,
+	}
+
+	innerHTTP2OnvmClient = &http.Client{
+		Transport: &http2.Transport{
+			AllowHTTP: true,
+			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
+				return onvmpoller.DialONVM("onvm", addr)
+			},
+		},
+	}
+	innerHTTP2OnvmTransportClient = &http.Client{
+		Transport: &http2.OnvmTransport{
+			UseONVM: USE_ONVM_CONN,
+			UseXIO:  USE_ONVM_CONN_XIO,
+		},
 	}
 )
 

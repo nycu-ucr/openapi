@@ -14,9 +14,10 @@ package ImsDataRepository
 
 import (
 	"crypto/tls"
-	"net/http"
 
-	"golang.org/x/net/http2"
+	"github.com/nycu-ucr/gonet/http"
+
+	"github.com/nycu-ucr/net/http2"
 )
 
 // APIClient manages communication with the Nudr_DataRepository API OpenAPI file API v2.3.0-alpha.4
