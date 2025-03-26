@@ -7,22 +7,19 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/nycu-ucr/gock v0.0.0-20230928062355-60066588379a
 	github.com/nycu-ucr/gonet v0.0.0-20230328095129-6e9ca74b90b5
-	github.com/nycu-ucr/net v0.0.0-20230321075841-be2b9a37bf1d
+	github.com/nycu-ucr/net v0.0.0-20231031091433-d01d59c308c0
 	github.com/nycu-ucr/oauth2 v0.0.0-20230927074609-e939447bd9b2
-	github.com/nycu-ucr/onvmpoller v0.0.0-20230328094138-e24131a655bb
+	github.com/nycu-ucr/onvmpoller v0.0.0-20230807070551-64ddd3797912
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.9.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace v0.49.0
-	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.49.0
 	go.opentelemetry.io/otel v1.24.0
 )
 
 require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1 // indirect
-	github.com/cornelk/hashmap v1.0.8 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect

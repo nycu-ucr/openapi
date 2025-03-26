@@ -37,7 +37,6 @@ import (
 	"github.com/nycu-ucr/onvmpoller"
 	"github.com/pkg/errors"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace"
-	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 )
 
 const (
@@ -53,27 +52,20 @@ const (
 
 var (
 	innerHTTP2Client = &http.Client{
-		Transport: otelhttp.NewTransport(&http2.Transport{
+		Transport: &http2.Transport{
 			TLSClientConfig: &tls.Config{
-				InsecureSkipVerify: true, // nolint:gosec
+				InsecureSkipVerify: true,
 			},
-			ReadIdleTimeout: ReadIdleTimeoutPeriod,
-			PingTimeout:     PingTimeoutPeriod,
-		}),
-		Timeout: TimeoutPeriod,
+		},
 	}
 
 	innerHTTP2CleartextClient = &http.Client{
-		Transport: otelhttp.NewTransport(&http2.Transport{
+		Transport: &http2.Transport{
 			AllowHTTP: true,
-			DialTLSContext: func(ctx context.Context, network, addr string, cfg *tls.Config) (net.Conn, error) {
-				dialer := &net.Dialer{}
-				return dialer.DialContext(ctx, network, addr)
+			DialTLS: func(network, addr string, cfg *tls.Config) (net.Conn, error) {
+				return net.Dial(network, addr)
 			},
-			ReadIdleTimeout: ReadIdleTimeoutPeriod,
-			PingTimeout:     PingTimeoutPeriod,
-		}),
-		Timeout: TimeoutPeriod,
+		},
 	}
 
 	innerHTTP2OnvmClient = &http.Client{
