@@ -175,10 +175,21 @@ func CallAPI(cfg Configuration, request *http.Request) (*http.Response, error) {
 	if cfg.HTTPClient() != nil {
 		return cfg.HTTPClient().Do(request)
 	}
-	if request.URL.Scheme == "https" {
-		return innerHTTP2Client.Do(request)
-	} else if request.URL.Scheme == "http" {
-		return innerHTTP2CleartextClient.Do(request)
+	if USE_ONVM_CONN || USE_ONVM_CONN_XIO {
+		if USE_ONVM_TRANSPORT {
+			// ONVM transport with onvm connection
+			return innerHTTP2OnvmTransportClient.Do(request)
+		} else {
+			// HTTP2 transport with onvm connection
+			return innerHTTP2OnvmClient.Do(request)
+		}
+	} else {
+		// HTTP2 transport with tcp connection
+		if request.URL.Scheme == "https" {
+			return innerHTTP2Client.Do(request)
+		} else if request.URL.Scheme == "http" {
+			return innerHTTP2CleartextClient.Do(request)
+		}
 	}
 
 	return nil, fmt.Errorf("unsupported scheme[%s]", request.URL.Scheme)
